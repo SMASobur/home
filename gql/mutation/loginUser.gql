@@ -1,0 +1,16 @@
+mutation loginUser($user: UserLoginInput) {
+  loginUser(user: $user) {
+    code
+    message
+    success
+    token
+    user{
+      id
+      firstName
+      lastName
+      email
+      emergencyContactNo
+      userType
+    }
+  }
+}
