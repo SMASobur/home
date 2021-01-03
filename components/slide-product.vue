@@ -1,16 +1,12 @@
 <template>
-<v-card elevation="4" shaped class="mx-auto ma-4">
-    
-   
+<v-card   elevation="5" rounded >
     <v-sheet
-    
     class="mx-auto ma-1"
   >
     <v-slide-group
       v-model="model"
-      class="pa-4"
-      active-class="success"
-      show-arrows
+      class="pa-1"
+ 
     >
       <v-slide-item
         v-for="n in 10"
@@ -41,31 +37,14 @@
     </v-card-subtitle>
 
     <v-card-actions>
-
-      <v-spacer></v-spacer>
     </v-card-actions>
   </v-card>
   
       </v-slide-item>
     </v-slide-group>
   </v-sheet>
+</v-card>
 
-   <div class="text-right">
-      <v-btn
-      class="mr-4 mb-4 "
-      outlined
-      color="primary"
-    > Best Sales
-        <v-icon
-          dark
-          right
-        >
-         mdi-arrow-right-bold-box-outline
-        </v-icon>
-    </v-btn>
-  </div>
-
-  </v-card>
 </template>
 
 <script>

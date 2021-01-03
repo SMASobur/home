@@ -1,19 +1,19 @@
 <template>
-  <v-container>
-   <home-intro/>
+<div>
+    <home-intro-1/>
 
-      <div>
-      <h1></h1> 
-      <h1>find Us</h1> 
-    </div>
-   
-  </v-container>
+    <home-col/>
+   <slide-product/>
+</div>
 </template>
 
 <script>
 import HomeIntro from '~/components/Home-intro.vue'
+import HomeIntro1 from '~/components/Home-intro1.vue'
+import HomeCol from '~/components/Home-col.vue'
+import SlideProduct from '~/components/slide-product.vue'
 export default {
-  components: { HomeIntro },
+  components: { HomeIntro, HomeIntro1, HomeCol, SlideProduct },
     data: () => ({
      
     }),
