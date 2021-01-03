@@ -1,7 +1,6 @@
 <template>
 <div>
     <home-intro-1/>
-
     <home-col/>
    <slide-product/>
 </div>

@@ -9,7 +9,7 @@
     <v-card class="ma-2" elevation="2" shaped>
             
             <v-img
-              src="https://cdn.vuetifyjs.com/images/cards/house.jpg"
+              src="https://cdn.vuetifyjs.com/images/cards/road.jpg"
               class="white--text align-end"
               gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
               height="300px"
@@ -30,7 +30,7 @@
           <v-card class="ma-2" elevation="2" shaped>
             
             <v-img
-              src="https://cdn.vuetifyjs.com/images/cards/house.jpg"
+              src="https://cdn.vuetifyjs.com/images/cards/plane.jpg"
               class="white--text align-end"
               gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
               height="300px"
