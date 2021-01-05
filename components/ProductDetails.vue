@@ -1,24 +1,29 @@
 <template>
-  <div>
-    <v-bottom-sheet v-model="sheet" inset scrollable persistent>
+  <div >
+    <v-bottom-sheet v-model="sheet" inset scrollable >
       <v-card>
         <!-- <p>{{ selectedSize }}</p> -->
-        <div class="d-flex justify-space-between">
-          <v-btn class="mt-4" text color="red" @click="sheet = !sheet"
+        <div class="text-right mr-4">
+          <v-btn outlined class="mt-4 ml-4 " text color="red" @click="sheet = !sheet"
             >close</v-btn
           >
+          
         </div>
         <v-card-text>
           <v-sheet scrollable>
             <v-row>
               <v-col class="d-flex flex-column align-center">
-                <v-img :src="item.thumbnail" contain max-width="200px"></v-img>
+                <v-img :src="item.thumbnail" contain max-width="250px">
+                   
+
+                </v-img>
 
                 <div v-if="item.hasMultipleSize">
                   <v-btn
                     v-if="!selectedSize.isAddedToCart"
                     color="primary"
                     tile
+                    outlined
                     dark
                     @click="onClickAddToCart"
                     >Add to Cart</v-btn
@@ -29,9 +34,10 @@
                     v-if="!item.isAddedToCart"
                     color="primary"
                     tile
+                    outlined
                     dark
                     @click="onClickAddToCart"
-                    >Add to Cart</v-btn
+                    ><v-icon>mdi-cart-plus</v-icon>Add to Cart</v-btn
                   >
                 </div>
 
@@ -109,13 +115,25 @@
                   <v-list-item-content>
                     <v-list-item-subtitle>Price</v-list-item-subtitle>
                     <v-list-item-title v-if="selectedSize">
-                      <b>{{ selectedSize.netPrice }}</b>
+                      <b>{{ selectedSize.netPrice  }}</b>
                       <s v-if="selectedSize.price != selectedSize.netPrice">{{
                         selectedSize.price
                       }}</s>
                     </v-list-item-title>
                     <v-list-item-title v-else>
-                      <b>{{ item.netPrice }}</b>
+                      <b>
+                        <v-btn
+                        x-small
+                        color="primary"                  
+                        dark
+                        outlined
+                        class=" mr-2"                  
+                      >
+                        
+                      <div > <h2>{{ item.netPrice +':- /st'}}</h2></div> 
+                      </v-btn>
+
+                      </b>
                       <s v-if="item.price != item.netPrice">{{ item.price }}</s>
                     </v-list-item-title>
                   </v-list-item-content>

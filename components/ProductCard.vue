@@ -11,25 +11,25 @@
       
     > 
     
-      <v-btn
+         <v-btn
                   small
-                  color="cyan darken-2"
-                  
+                  color="deep-orange" 
+                                   
                   dark
-                  rounded
-                  class="rotated mt-5 mr-2"
-                  
+                  outlined
+                  class="rotated mt-2 mr-2 bgcolor"                  
                 >
                   
-                <div class="subtitle-1 my-1"> <h2>{{ price +':-'}}</h2></div> 
+                <div > <h2>{{ price +':-'}}</h2></div> 
                 </v-btn>
     </v-img>
          
  <v-card-title
       v-if="title"
       class="text-truncate"
+      @click="onDetailsClicked"
       >{{ title }}  <br>
-        <v-list-item-subtitle>
+        <v-list-item-subtitle @click="onDetailsClicked">
        <div  class="text-truncate subtitle-1 ">{{ description }}</div> 
         </v-list-item-subtitle>
       
@@ -140,8 +140,8 @@ export default {
   word-break: normal;
   hyphens: auto;
 }
-.rotated{
-  transform: rotate(30deg);
+.bgcolor{
+  background-color: white;
 }
 
 </style>

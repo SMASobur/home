@@ -1,8 +1,9 @@
 <template>
 <div>
     <home-intro-1/>
+    <slide-product/>
     <home-col/>
-   <slide-product/>
+   
 </div>
 </template>
 

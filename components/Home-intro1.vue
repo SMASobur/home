@@ -15,14 +15,32 @@
               
             >
             <div class="topright">
-        <v-btn>
-        <v-icon
+    
+         <v-icon
           dark
           right
+        
         >
          mdi-facebook
         </v-icon>
-        </v-btn>
+          <v-icon
+          dark
+          right
+        
+        >
+         mdi-twitter
+        </v-icon>
+                </v-icon>
+          <v-icon
+          dark
+          right
+        
+        >
+         mdi-instagram 
+        </v-icon>
+
+
+   
         </div>
             <v-card-title  class="txtgb" v-text="card.title"></v-card-title>
     
@@ -33,6 +51,7 @@
 
  <p>{{card.subtitle}}
    <v-btn
+      rounded
       v-if="card.link"
         class="ma-2"
         color="primary "
