@@ -1,26 +1,45 @@
 <template>
-  <v-card hover class="mx-auto" height="100%" tile>
+  <v-card hover class="mx-auto" height="100%" dense>
     <v-img
       v-if="thumbnail"
       @click="onDetailsClicked"
-      max-height="200"
+      max-height="180"
       contain
-      class="green lighten-4"
+      class="white text-right "
       :src="thumbnail"
       :lazy-src="thumbnail"
-    ></v-img>
-    <v-card-title
+      
+    > 
+    
+      <v-btn
+                  small
+                  color="cyan darken-2"
+                  
+                  dark
+                  rounded
+                  class="rotated mt-5 mr-2"
+                  
+                >
+                  
+                <div class="subtitle-1 my-1"> <h2>{{ price +':-'}}</h2></div> 
+                </v-btn>
+    </v-img>
+         
+ <v-card-title
       v-if="title"
-      @click="onDetailsClicked"
       class="text-truncate"
-      >{{ title }}</v-card-title
+      >{{ title }}  <br>
+        <v-list-item-subtitle>
+       <div  class="text-truncate subtitle-1 ">{{ description }}</div> 
+        </v-list-item-subtitle>
+      
+      </v-card-title
     >
+    
     <v-card-text @click="onDetailsClicked" class="text--primary">
       <div class="subtitle-1">
         <v-chip small color="primary">{{ category }}</v-chip>
       </div>
-      <div class="subtitle-1 my-1">Price {{ price }}</div>
-      <div class="text-truncate">{{ description }}</div>
     </v-card-text>
 
     <v-divider class="mx-4"></v-divider>
@@ -30,7 +49,8 @@
         color="primary"
         small
         outlined
-        >Add to Cart</v-btn
+        block
+        >Details</v-btn
       >
       <!-- <v-btn
         v-if="isAddedToCart"
@@ -120,4 +140,8 @@ export default {
   word-break: normal;
   hyphens: auto;
 }
+.rotated{
+  transform: rotate(30deg);
+}
+
 </style>

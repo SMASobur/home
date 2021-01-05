@@ -14,18 +14,28 @@
               height="300px"
               
             >
+            <div class="topright">
+        <v-btn>
+        <v-icon
+          dark
+          right
+        >
+         mdi-facebook
+        </v-icon>
+        </v-btn>
+        </div>
             <v-card-title  class="txtgb" v-text="card.title"></v-card-title>
     
     
             
             </v-img>
             <v-card-actions>
-                     <h3 class="font-weight-light mx-1">{{card.subtitle}}</h3>
 
-      <v-btn
+ <p>{{card.subtitle}}
+   <v-btn
       v-if="card.link"
         class="ma-2"
-        color="primary"
+        color="primary "
         dark
         :to=card.link
       >
@@ -34,9 +44,10 @@
           dark
           right
         >
-         mdi-arrow-right-bold-box-outline
+         mdi-hand-pointing-right 
         </v-icon>
-      </v-btn>
+      </v-btn></p>
+      
             </v-card-actions>
           </v-card>
         </v-col>
@@ -49,7 +60,7 @@ export default {
   components: { slideProduct },
     data: () => ({
       cards: [
-        { title: 'Try Our Online Order System and you will never go back', subtitle: 'we are here to serve you best with afortable price. we are here to serve you best with afortable price.we are here to serve you best with afortable price',src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', flex: 12 , button_text:'go to shop',},
+        { title: 'Try Our Online Order System and you will never go back', subtitle: 'we are here to serve you best with afortable price. we are here to serve you best with afortable price.we are here to serve you best with afortable price. we are here to serve you best with afortable price. we are here to serve you best with afortable price. ',src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', flex: 12 , button_text:'go to shop', link:'/shop'},
         
     
 
@@ -91,11 +102,11 @@ export default {
 
 }
 
-  .txtgb:hover {
-  font-size: 25px;
-  text-shadow:0px 0px 20px rgb(218, 253, 92);
-  color:white;
-
+.topright {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
 }
      
 </style>
